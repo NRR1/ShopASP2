@@ -16,6 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ShopASP2.Application\ShopASP2.Application.csproj" />
     <ProjectReference Include="..\ShopASP2.Infrastructure\ShopASP2.Infrastructure.csproj" />
   </ItemGroup>
 

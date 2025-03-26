@@ -1,7 +1,11 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using ShopASP2.Application.Interfaces;
+using ShopASP2.Application.Services;
 using ShopASP2.Domain.Entities;
+using ShopASP2.Domain.Interfaces;
 using ShopASP2.Infrastructure.Data;
+using ShopASP2.Infrastructure.Repositories;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<ShopASP2DBContext>(options =>
@@ -33,6 +37,12 @@ builder.Services.Configure<IdentityOptions>(options =>
     options.Password.RequiredLength = 10;
     options.Password.RequiredUniqueChars = 1;
 });
+
+builder.Services.AddScoped<IAccountRepository, AccountRepository>();
+builder.Services.AddScoped<IProductRepository, ProductRepository>();
+builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddScoped<IAccountService, AccountService>();
+
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
