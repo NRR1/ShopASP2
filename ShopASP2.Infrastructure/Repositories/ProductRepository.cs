@@ -10,10 +10,10 @@ namespace ShopASP2.Infrastructure.Repositories
     {
         private readonly ShopASP2DBContext db;
         private readonly ILogger<ProductRepository> logger;
-        public ProductRepository(ShopASP2DBContext db, ILogger<ProductRepository> log)
+        public ProductRepository(ShopASP2DBContext db, ILogger<ProductRepository> logger)
         {
             this.db = db;
-            logger = log;
+            this.logger = logger;
         }
         public async Task<IEnumerable<Product>> GetValues()
         {
