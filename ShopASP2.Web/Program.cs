@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using ShopASP2.Application.Interfaces;
+using ShopASP2.Application.Mapping;
 using ShopASP2.Application.Services;
 using ShopASP2.Domain.Entities;
 using ShopASP2.Domain.Interfaces;
@@ -8,6 +9,7 @@ using ShopASP2.Infrastructure.Data;
 using ShopASP2.Infrastructure.Repositories;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
+builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<ShopASP2DBContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("CS"));
@@ -42,9 +44,8 @@ builder.Services.AddScoped<IAccountRepository, AccountRepository>();
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<IAccountService, AccountService>();
-
+builder.Services.AddAutoMapper(typeof(MappingProfile));
 // Add services to the container.
-builder.Services.AddControllersWithViews();
 
 WebApplication app = builder.Build();
 using(var scope = app.Services.CreateScope())
@@ -56,7 +57,7 @@ using(var scope = app.Services.CreateScope())
     }
     catch(Exception ex)
     {
-        var logger = services.GetRequiredService<ILogger<Program>>();
+        ILogger logger = services.GetRequiredService<ILogger<Program>>();
         logger.LogInformation(ex.Message.ToString(), "Не удалось создать бд");
     }
 }
