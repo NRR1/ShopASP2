@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35825.156 d17.13
+VisualStudioVersion = 17.13.35825.156
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopASP2.Web", "ShopASP2.Web\ShopASP2.Web.csproj", "{4B1AA483-DE72-4DA4-9FB2-E10AEB080A6B}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopASP2.Application", "ShopASP2.Application\ShopASP2.Application.csproj", "{C62A1D23-8B60-4AAE-AE7E-548B4B8E666B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopASP2.Infrastructure", "ShopASP2.Infrastructure\ShopASP2.Infrastructure.csproj", "{62313918-32F7-4B3D-8039-584933C605E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopASP2.Tests", "ShopASP2.Tests\ShopASP2.Tests.csproj", "{D3FF72C1-89C9-46D7-9406-C4A79E514756}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{62313918-32F7-4B3D-8039-584933C605E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{62313918-32F7-4B3D-8039-584933C605E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{62313918-32F7-4B3D-8039-584933C605E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3FF72C1-89C9-46D7-9406-C4A79E514756}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3FF72C1-89C9-46D7-9406-C4A79E514756}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3FF72C1-89C9-46D7-9406-C4A79E514756}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3FF72C1-89C9-46D7-9406-C4A79E514756}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
